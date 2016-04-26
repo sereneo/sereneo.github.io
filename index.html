@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Hello World 100x (For Loops and DOM)</title>
+		<style>
+		h1{
+			text-align: center;
+		}
+
+		</style>
+	</head>
+	<h1>Hello World 100x (For Loops and DOM)</h1><hr>
+	<a>Enter the number of times you want it to print:</a> <input id="inputBox" value="0" onkeyup="wholeThing()"></input><br>
+	<body style="background-color: white; color: black;">
+	<a id="answer"></a>
+	<a id="thing"></a>
+	<p id="myP"></a>
+	<script> 
+
+		function wholeThing(){
+			var x = document.getElementById("inputBox").value;
+			document.getElementById("thing").innerHTML = "";
+			for(i=0; i < x; i++){ 
+				document.getElementById("thing").innerHTML += "Hello World <br>";
+				//document.getElementById("thing").innerHTML += "";
+
+			}
+		}
+
+		function arialChange(){
+		    //document.getElementById("radioButton").click()
+			document.getElementById("thing").style.fontFamily = "'Arial', Helvetica, sans-serif";
+		}
+		function timesChange(){ 
+		   	document.getElementById("thing").style.fontFamily = "'Times New Roman', Times, serif"
+		}
+		function comicChange(){
+			document.getElementById("thing").style.fontFamily = "Comic Sans MS, cursive, sans-serif";
+		}
+	</script>
+		<form>
+			<input type="radio" name="font" value="Arial" onclick="arialChange()"> Arial<br>
+		    <input type="radio" name="font" value="Comic Sans" onclick="comicChange()"> Comic Sans<br>
+		    <input type="radio" name="font" value="Times New Roman" onclick="timesChange()"> Times New Roman
+		</form>
+	</body>
+</html>
