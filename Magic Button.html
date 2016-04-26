@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Magic Button</title>
+		<center><h1>Magic Button</h1><hr></center>																																																													
+	</head>
+	<style>
+	button{
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 16px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+	}
+	</style>
+	
+	<body>
+		<button onclick="magicButton();" id='randomColor'> Click Me </button>
+		<div id="buttonWork"></div>
+		<script>
+			
+			function magicButton(){
+				var newColor = getRandomColor();
+				document.getElementById("buttonWork").innerHTML += "<button onclick='magicButton()' style='background-color:" + newColor +"'> Click Me </buton>";
+			}
+			
+			function getRandomColor(){
+				var letters = '0123456789ABCDEF'.split('');
+				var color = '#';
+				for (var i = 0; i < 6; i++){
+					color += letters [Math.floor(Math.random() * 16)];
+				}
+				return color;
+			}
+			
+		</script>
+	</body>
+</html>

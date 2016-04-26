@@ -1,0 +1,80 @@
+<html>
+	<head>
+		<title>Checkpoint 1 Quiz</title>
+		<style>
+			canvas {
+				background-color: gray;
+				border-style:solid;
+			}
+		</style>
+	</head>
+	<body>
+
+
+		<button onclick="draw()">Click Me</button>
+		<canvas id="myCanvas" height="500px" width="500px"></canvas>
+		<script>
+			var cwidth=prompt("What width should the canvas be");
+			var cheight=prompt("What height should the canvas be");
+			document.getElementById("myCanvas").style.width = cwidth + "px";
+			document.getElementById("myCanvas").style.height = cheight + "px";
+			
+			function draw(){
+				var c = document.getElementById("myCanvas"); //this is the canvas as a variable
+				
+				var rectangleRed = document.getElementById("myCanvas"); 
+				var ctx = rectangleRed.getContext("2d"); 
+				ctx.fillStyle="red";
+				ctx.fillRect(0, 0, rectangleRed.width/7, rectangleRed.height); //0
+				
+				var rectangleOrange = document.getElementById("myCanvas"); 
+				var ctx = rectangleOrange.getContext("2d"); 
+				ctx.fillStyle="#FF7F17";
+				ctx.fillRect((1*c.width)/7, 0, rectangleOrange.width/7, rectangleOrange.height); //1/7
+
+				var rectangleYellow = document.getElementById("myCanvas"); 
+				var ctx = rectangleYellow.getContext("2d"); 
+				ctx.fillStyle="yellow";
+				ctx.fillRect((2*c.width)/7, 0, rectangleYellow.width/7, rectangleYellow.height); //2/7
+
+				var rectangleGreen = document.getElementById("myCanvas"); 
+				var ctx = rectangleGreen.getContext("2d");
+				ctx.fillStyle="green";
+				ctx.fillRect((3*c.width)/7, 0, rectangleGreen.width/7, rectangleGreen.height); //3/7
+
+				var rectangleBlue = document.getElementById("myCanvas"); 
+				var ctx = rectangleBlue.getContext("2d"); 
+				ctx.fillStyle="blue";
+				ctx.fillRect((4*c.width)/7, 0, rectangleBlue.width/7, rectangleBlue.height); //4/7
+
+				var rectangleIndigo = document.getElementById("myCanvas"); 
+				var ctx = rectangleIndigo.getContext("2d");
+				ctx.fillStyle="#621FB5";
+				ctx.fillRect((5*c.width)/7, 0, rectangleIndigo.width/7, rectangleIndigo.height); //5/7
+				
+				var rectangleViolet = document.getElementById("myCanvas"); 
+				var ctx = rectangleViolet.getContext("2d"); 
+				ctx.fillStyle="#C466FF";
+				ctx.fillRect((6*c.width)/7, 0, rectangleViolet.width/7, rectangleViolet.height); //6/7
+				//INPUT TAG?????
+				
+				/*<form action="action_page.php">
+				What do you want the width to be?
+				<input type="number" name="quantity" min="1" max="100000000">
+				<input type="submit">
+				</form>
+				*/
+
+				/*
+				function ccwidthheight(){
+				document.getElementById("myCanvas").style.width = cc_width;			
+				document.getElementById("myCanvas").style.height = cc_height;
+				}
+				ccwidthheight();
+				
+				*/
+			}
+		</script>
+
+	</body>
+	</html>
