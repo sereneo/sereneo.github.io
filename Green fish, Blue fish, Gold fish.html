@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title>Green fish, Blue fish, Gold fish</title>
+		<center><h1>Green fish, Blue fish, Gold fish</h1><hr color = #32C0F0></center>	
+		<style>
+			body{
+				font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+			}
+			#someId {
+
+			}
+			h1{
+				font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+			}
+			p{
+				font-size: 20px;
+			}
+
+			div.class {
+
+			}
+			img {
+				height: 125px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<center><p>How many fish? </p> <input id = "fishNum" onchange="fishy(this.value)" type="number" ></input></center><br>
+		
+		<div style="text-align: center;">
+			<div class="one">
+				<img src = "http://worldartsme.com/images/green-fish-clipart-1.jpg"><a> I am worth 1</a>
+				<img src="http://images.clipartpanda.com/free-fish-clipart-happy_blue_fish.png"><a>I am worth 5</a>
+				<img src="http://images.clipartpanda.com/fish-clipart-dirynEei9.png"><a>I am worth 10</a>
+				<img src="http://images.clipartpanda.com/cute-starfish-clipart-cute-fish-clipartcute-orange-starfish---free-clip-art-qcjixwyt.png"><a>I am worth 100</a>
+				<br>
+				<!-- <a>Green is worth 1, Blue is worth 5, Gold is worth 10, Star is worth 100</a> -->
+			</div>
+		</div>
+		<div id="fish"> </div>
+
+		<script>
+		function fishy(x){
+		//var x = document.getElementById("inputBox").value;
+		document.getElementById("fish").innerHTML= "";
+				for (var i=0; i<x; i++){
+					while (x >= 100){
+						document.getElementById("fish").innerHTML+="<img src=' http://images.clipartpanda.com/cute-starfish-clipart-cute-fish-clipartcute-orange-starfish---free-clip-art-qcjixwyt.png '>";
+						x=x-100;
+						if(x<100){
+							break;
+						}
+					}
+					while(x >= 10){
+						document.getElementById("fish").innerHTML+="<img src=' http://images.clipartpanda.com/fish-clipart-dirynEei9.png '>";
+						x=x-10;
+						if(x<10){
+							break;
+						}
+					}
+					while( x >= 5){
+						document.getElementById("fish").innerHTML+="<img src=' http://images.clipartpanda.com/free-fish-clipart-happy_blue_fish.png'>";
+						x=x-5;
+						if(x<5){
+							break;
+						}
+					}
+					while(x >= 1){
+						document.getElementById("fish").innerHTML+= "<img src=' http://worldartsme.com/images/green-fish-clipart-1.jpg '/>";
+						x=x-1;
+						if(x<1){
+							break;
+						}
+					}	
+				}
+					/*if(x < 100 && x >= 10){
+						document.getElementById("fish").innerHTML+="<img src=' http://images.clipartpanda.com/fish-clipart-dirynEei9.png '>";
+					}
+					if(x < 10 && x >= 5){
+						document.getElementById("fish").innerHTML+="<img src=' http://images.clipartpanda.com/free-fish-clipart-happy_blue_fish.png'>";
+					}
+					if(x < 5 && x >= 1){
+						document.getElementById("fish").innerHTML+= "<img src=' http://worldartsme.com/images/green-fish-clipart-1.jpg '/>";
+					}
+					if (x > 100){
+						document.getElementById("fish").innerHTML+="<img src=' http://images.clipartpanda.com/cute-starfish-clipart-cute-fish-clipartcute-orange-starfish---free-clip-art-qcjixwyt.png '>";
+					}*/
+		
+		}
+		</script>
+
+	</body>
+</html>
